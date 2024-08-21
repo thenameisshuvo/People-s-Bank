@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People's Bank</title>
+    <link rel="icon" type="image/png" href="/bank.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="login-area">
+        <h1 class="text-center">People's Bank</h1>
+        <div class="submit-area">
+            <h4>Login</h4>
+            <input type="text" id="email" class="form-control" placeholder="Email:xyz@gmail.com">
+            <br>
+            <input type="password" name="" id="password" class="form-control" placeholder="Password: 12345678">
+            <br>
+            <button id="login" class="btn btn-success">Log In</button>
+        </div>
+    </div>
+    
+
+    <div id="transaction-area">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="deposit status">
+                    <h5>Deposit</h5>
+                    <h2>$<span id="currentDeposit">00</span></h2>
+                </div>
+                
+            </div>
+            <div class="col-md-4 ">
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h2>$<span id="currentWithdraw">00</span</h2>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$<span id="currentBalance">18705</span></h2>
+                </div>
+            </div>
+        </div>
+        <div id="loan-calculator">
+            <h4>Loan Calculator</h4>
+            <input type="number" id="loan-amount" class="form-control" placeholder="Loan Amount">
+            <br>
+            <input type="number" id="interest-rate" class="form-control" placeholder="Interest Rate (%)">
+            <br>
+            <input type="number" id="repayment-period" class="form-control" placeholder="Repayment Period (Years)">
+            <br>
+            <button class="btn btn-info" id="calculate-loan">Calculate</button>
+            <br>
+            <div id="loan-result">
+                <p>Monthly Repayment: $<span id="monthly-repayment"></span></p>
+                <p>Total Repayment: $<span id="total-repayment"></span></p>
+            </div>
+        </div>
+        
+        
+    <div class="row">
+        <div class="col-md-6">
+           <div class="submit-area">
+                <h4>Deposit</h4>
+                <input id="depositAmount" type="text" class="form-control" placeholder="$ amount you want to deposit">
+                <br>
+                <button class="btn btn-success" id="addDeposit">Deposit</button>
+           </div>
+        </div>
+        <div class="col-md-6">
+            <div class="submit-area">
+                <h4>Withdraw</h4>
+                <input type="text" id="withdrawAmount" class="form-control" placeholder="$ amount you want to withdraw">
+                <br>
+                <button class="btn btn-success" id="addWithdraw" >Withdraw</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="logout-btn">
+        <button id="logout" class="btn btn-danger d-flex align-items-center">Log Out</button>
+    </div>
+
+    </div>
+    
+
+    <script src="/script.js"></script>
+</body>
+</html>
+
+
